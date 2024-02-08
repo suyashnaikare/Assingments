@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum</title>
+</head>
+<body>
+    <form>
+        <label for="numb1">Enter the first Number</label>
+        <input type="number" id="numb1"/><br><br>
+        <label for="numb2">Enter the Second Number</label>
+        <input type="number" id="numb2"/><br><br>
+
+        <input type="button" onclick="Sum()" value="Calculate"/>
+        <!-- We cant use submit button here 
+        kyuki agar submit button use karega to submit karne pe page refresh hoga jisse result bhi gayab ho 
+        jayega try it  -->
+
+
+    </form>
+
+    <div><p>Sum = <span id="result"></span></p></div>
+
+    <script>
+
+        function Sum(){
+            
+            numb1 = parseInt(document.getElementById("numb1").value)
+            numb2 = parseInt(document.getElementById("numb2").value)
+
+            sum = numb1 + numb2 
+
+            document.getElementById("result").textContent = sum 
+        }
+    </script>
+</body>
+</html>

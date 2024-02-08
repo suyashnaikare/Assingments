@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="string">Enter a String to Check :</label>
+        <input type="text" id="string"/><br><br>
+        <input type="button" value="Check" onclick="Ispalindrome()"/>
+    </form>
+
+    <script>
+
+        function Ispalindrome(){
+            word = document.getElementById("string").value
+
+            newword = ""
+
+            for(let i = word.length -1 ; i >= 0 ; i--){
+
+                newword += word[i]                
+
+            }
+
+            if(newword == word){
+                
+                document.write(word + " is a Palindrome")
+            }else {
+
+                document.write(word + " is not a Palindrome")
+            }
+
+
+        }
+        </script>
+</body>
+</html>
