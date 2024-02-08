@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade</title>
+</head>
+
+<body>
+    <form>
+        <label for="maxmarks">Enter Maximum Marks</label>
+        <input type="number" id="maxmarks" /><br><br>
+        <label for="marksobtained">Enter Marks Obtained</label>
+        <input type="number" id="marksobtained" /><br><br>
+
+        <input type="button" onclick="percentage()" value="Calculate" />
+
+    </form>
+
+    <div>
+        <p>percentage = <span id="percentage"></span></p>
+    </div>
+    <div>
+        <p>Grade = <span id="grade"></span></p>
+    </div>
+    <script>
+        function percentage() {
+
+            marks = parseFloat(document.getElementById("marksobtained").value)
+            percentages = (marks * 100) / parseFloat(document.getElementById("maxmarks").value)
+            document.getElementById("percentage").innerText = percentages + "%"
+
+            switch (true) {
+
+                case (percentages >= 90):
+                    document.getElementById("grade").innerText = 'A'
+                    break;
+                case (percentages >= 80):
+                    document.getElementById("grade").innerText = 'B'
+                    break;
+                case (percentages >= 70):
+                    document.getElementById("grade").innerText = 'C'
+                    break;
+                case (percentages >= 60):
+                    document.getElementById("grade").innerText = 'D'
+                    break;
+                case (percentages >= 50):
+                    document.getElementById("grade").innerText = 'F'
+                    break;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
